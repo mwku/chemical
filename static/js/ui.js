@@ -1,6 +1,3 @@
-function play(url){
-    window.location.href = '/play?url=' + url;
-}
 let vedio_info = null;
 fetch('/static/data/home/vedio.json')
 .then(response => response.json())
@@ -15,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         while (document.getElementById('container').firstChild) {
             document.getElementById('container').removeChild(document.getElementById('container').firstChild);
         }
-        let e=`<h1 id="sentence" class="fade-in-left"  >阿你知道LP跟BP是甚麼嗎?<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前幾天上課有人說...懶趴</h1>`
+        let e=`<h1 id="sentence" class="fade-in-left">阿你知道LP跟BP是甚麼嗎?<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前幾天上課有人說...懶趴</h1>`
         document.getElementById('container').innerHTML = e;
     });
 

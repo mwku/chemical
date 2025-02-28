@@ -1,5 +1,5 @@
 .header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    z-index: 9999999;
 }
 .header-area{
     color:black;
@@ -20,6 +21,17 @@
     width: 100%;
     max-width: 1110px;
     font-size: 20px;
+}
+.home-text{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #88aaff;
+}
+.home-text:hover{
+    background-color: #7799ee;
 }
 .class-area{
     display: flex;
@@ -47,7 +59,7 @@
 .container{
     position: absolute;
     top: 130px;
-    width: 1000px;
+    width: 800px;
     display: flex;
     flex-direction: column;
 }
@@ -67,13 +79,37 @@
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
 }
 .vedio{
-    width: 920px;
+    width: 720px;
     height: 200px;
     background-color: #ffffff;
+    position: relative;
+}
+.vedio-img{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    object-fit: contain;
+    /* image-rendering: pixelated; */
+}
+.title{
+    font-size: 45px;
+    position: absolute;
+    left: 300px;
+    top: 10px;
+    color: #4466bb;
+}
+.date{
+    font-size: 20px;
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    color: #4466bb;
 }
 .dashed{
     border-top: #88aaff dashed 0.5px;
-    width: 920px;
+    width: 720px;
     height: 0px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -102,5 +138,8 @@ body{
 }
 
 .fade-in-left {
+    font-size: 50px;
+    position: absolute;
+    top: 75px;
     animation: fadeInFromLeft 2s ease-in-out;
 }

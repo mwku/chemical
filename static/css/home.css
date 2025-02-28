@@ -3,11 +3,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color: #88aaff;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 .header-area{
     color:black;
@@ -17,13 +18,22 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1110px;
     font-size: 20px;
+}
+.class-area{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    background-color: #88aaff;
 }
 .class{
     height: 40px;
     width: 60px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    margin-top: 0;
     margin-left: 10px;
     background-color: #88aaff;
     display: flex;
@@ -36,17 +46,61 @@
 }
 .container{
     position: absolute;
-    top: 70px;
-    max-width: 1000px;
-    min-width: 300px;
+    top: 130px;
+    width: 1000px;
     display: flex;
     flex-direction: column;
 }
+.vedio-area{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    /* height: 100px; */
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    /* justify-content: center;
+     */
+    margin-bottom: 75px;
+     align-items: center;
+    flex-direction: column;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+.vedio{
+    width: 920px;
+    height: 200px;
+    background-color: #ffffff;
+}
+.dashed{
+    border-top: #88aaff dashed 0.5px;
+    width: 920px;
+    height: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.vedio:hover{
+    background-color: #eeeeee;
+}
 body{
+    user-select: none;
     margin: 0;
     padding: 0;
     position: relative;
     background-color: #eeeeee;
     display: flex;
     justify-content: center;
+}
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-left {
+    animation: fadeInFromLeft 2s ease-in-out;
 }
